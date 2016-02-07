@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.emotionalcode.brave.MissionActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your first mission is to take a picture of a stranger WITHOUT GETTING NOTICED"
+        android:id="@+id/missionDetailsTxt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="100dp"
+        android:text="-1"
+        android:id="@+id/timerTextView"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:textSize="24dp"
+        android:text="Take a selfie"
+        android:id="@+id/doMissionBtn"
+        android:background="@android:color/holo_green_light"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="doMission"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:text="I'm a pussy"
+        android:id="@+id/cancelMissionBtn"
+        android:background="@android:color/holo_red_dark"
+        android:layout_toRightOf="@id/doMissionBtn"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
