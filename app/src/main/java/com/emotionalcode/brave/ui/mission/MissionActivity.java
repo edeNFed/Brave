@@ -1,4 +1,4 @@
-package com.emotionalcode.brave;
+package com.emotionalcode.brave.ui.mission;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
@@ -9,9 +9,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.emotionalcode.brave.R;
+import com.emotionalcode.brave.ui.base.BaseActivity;
+
 import java.util.concurrent.TimeUnit;
 
-public class MissionActivity extends AppCompatActivity {
+public class MissionActivity extends BaseActivity implements  MissionMvpView {
 
     private static final int PHOTO_TAKEN_REQUEST_CODE = 123;
     private TextView timerTextView;
@@ -62,8 +65,19 @@ public class MissionActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    public void doMission(View view) {
+    @Override
+    public void doMission() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, PHOTO_TAKEN_REQUEST_CODE);
+    }
+
+    @Override
+    public void timeoutMission() {
+
+    }
+
+    @Override
+    public void cancelMission() {
+
     }
 }
